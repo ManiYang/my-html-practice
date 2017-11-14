@@ -121,8 +121,8 @@ td {
 
 .my-work-gallery-item {
   position: relative;
-  max-width: 250px;
-  min-width: 40px;
+  max-width: 30%;
+  /*min-width: 40px;*/
   display: inline-block;
   margin: 0 10px 10px 10px;
 }
@@ -181,4 +181,79 @@ form.contact-form {
 .form-row button[type="submit"] {
   background-color: #5995DA;
   color: #fff;
+}
+
+/***************************************************************************/
+
+@media screen and (min-width: 1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+/***************************************************************************/
+
+@media screen and (max-width: 1023px) {
+  .container {
+    width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: #cc8800;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+  div#my-avatar {
+    /*width: 100%;*/
+    float: none;
+  }
+
+  div#my-avatar img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  .my-work-gallery-item {
+    max-width: 100%;
+  }
+
+  form.contact-form {
+    width: 90%;
+  }
 }
